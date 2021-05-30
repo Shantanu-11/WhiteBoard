@@ -13,7 +13,7 @@ function createWindow(){
           }
       })
       
-      mainWindow.loadFile("index.html").then( function(){
+      mainWindow.loadFile("./public/index.html").then( function(){
           mainWindow.webContents.openDevTools(); //open dev tools
           mainWindow.maximize();
           mainWindow.removeMenu();
