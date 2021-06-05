@@ -1,13 +1,29 @@
 let pencil = document.querySelector("#pencil");
 let eraser = document.querySelector("#eraser");
 
-let activeTool = "pencil";
+let pencilOptions = pencil.querySelector(".tool-options");
+let eraserOptions = eraser.querySelector(".tool-options");
 
-pencil.addEventListener("click" , function(){
+let pencilSizeInput = pencil.querySelector("input");
+let eraserSizeInput = eraser.querySelector("input");
+
+let pencilColors=pencil.querySelector(".pencil-colors div");
+
+let activeTool = "pencil"; 
+
+pencil.addEventListener("click" , function(e){
     if(activeTool == "pencil"){
-        // pencil options open ya close honge
-    }
-    else{
+        let disp=e.target.classList;
+        console.log(e);
+        if(disp.contains("hide")){
+            disp.classList.add("unhide");
+            disp.classList.remove("hide"); 
+        }else if(disp.classList.contains("unhide")){
+             disp.classList.remove("unhide");
+             disp.classList.add("hide");
+        }
+       
+    } else{ 
         activeTool = "pencil";
         ctx.strokeStyle = "black";
     }
@@ -15,7 +31,6 @@ pencil.addEventListener("click" , function(){
 
 eraser.addEventListener("click" , function(){
     if(activeTool == "eraser"){
-        // eraser options open ya close honge
     }
     else{
         activeTool = "eraser";
