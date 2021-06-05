@@ -40,6 +40,7 @@ function redoLine(){
         for(let i=0;i<line.length;i++){
             let pointObject=line[i];
             if(pointObject.type=='md'){
+
                 ctx.strokeStyle=pointObject.color;
                 ctx.lineWidth=pointObject.width;
                 ctx.beginPath();

@@ -9,7 +9,7 @@ canvas.height = window.innerHeight - (canvasTop+5);
 window.addEventListener("resize" , function(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight -( canvasTop+5);     
-    redrawLine();
+    reDrawLine();
 }) 
 let ctx = canvas.getContext("2d");
 
@@ -58,7 +58,6 @@ canvas.addEventListener("mousemove" , function(e){
 
 canvas.addEventListener("mouseup" , function(e){
     isMouseDown = false;
-    
     db.push(line);
     line=[];
     console.log(db);
